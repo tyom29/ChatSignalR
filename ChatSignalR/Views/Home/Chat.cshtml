@@ -1,0 +1,36 @@
+﻿<style>
+    div.panel-body {
+        overflow: scroll;
+        background: url('http://subtlepatterns.com/patterns/geometry2.png');
+    }
+</style>
+<h2>ChatBox</h2>
+<div class="chat-panel panel panel-default">
+    <div class="panel-heading">
+        ChatBox using SingalR
+        <i class="fa fa-paper-plane fa-fw"></i>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body" id="chat" style="height:250px;">
+        <input type="hidden" id="displayname" />
+
+        <p id="discussion"></p>
+    </div>
+    <!-- /.panel-body -->
+    <div class="panel-footer">
+        <div class="input-group">
+            <input id="message" type="text" name="message" class="form-control input-sm" placeholder="Type your message here..." />
+
+            <span class="input-group-btn">
+                <input type="button" class="btn btn-warning btn-sm" id="sendmessage" value="Send">
+
+            </span>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.0.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/signalrscript.js"></script>
+}
